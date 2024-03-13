@@ -2961,11 +2961,11 @@ function rs() {
         const d = new ns({
             svg: r
         });
-        r.on("mousedown", ()=>{
+        r.on("pointerdown", ()=>{
             a = !0
         }
         ),
-        r.on("mouseup", g=>{
+        r.on("pointerup", g=>{
             if (a = !1,
             u) {
                 u = !1;
@@ -2988,7 +2988,7 @@ function rs() {
             })
         }
         ),
-        r.on("mousemove", g=>{
+        r.on("pointermove", g=>{
             if (!a)
                 return;
             const C = .1
