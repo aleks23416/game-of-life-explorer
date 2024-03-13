@@ -3045,18 +3045,13 @@ function rs() {
 					</div>
 					<div style="display: flex; flex-direction: column; justify-content: space-between; color: white; font-size: 0.8rem;">
 						<div>
-							<h3 style="margin-top: 0;">Desktop controls:</h3>
+							<h3 style="margin-top: 0;">Supported operations:</h3>
 							<ul style="list-style-type: none;">
-								<li>To move press mouse and move.</li>
-								<li>To zoom move mouse wheel.</li>
-							</ul>
-						</div>
-
-						<div>
-							<h3 style="margin-top: 2em;">Mobile controls:</h3>
-							<ul style="list-style-type: none;">
-								<li>To move press mouse and move.</li>
-								<li>To zoom move mouse wheel.</li>
+								<li>Moving</li>
+								<li>Zooming</li>
+                                <li>Pausing</li>
+                                <li>Toggling individual cells</li>
+                                <li>Toggling individual cells</li>
 							</ul>
 						</div>
 
