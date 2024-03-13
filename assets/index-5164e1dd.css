@@ -1,0 +1,149 @@
+:root {
+    box-sizing: border-box
+}
+
+*,*:before,*:after {
+    box-sizing: inherit
+}
+
+:root {
+    font-family: "Press Start 2P",sans-serif;
+    font-size: calc(.5em + 1vw);
+    user-select: none;
+    cursor: url(/cursor.cur),auto
+}
+
+body {
+    margin: 0;
+    min-height: 100vh
+}
+
+input,.button,.press-to-continue,a,#modal-close {
+    cursor: url("/cursor(23).cur"),auto
+}
+
+.loading-page {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #000
+}
+
+.welcome-page {
+    background-color: #000;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.typewriter {
+    position: relative;
+    width: max-content;
+    font-size: 2.5rem
+}
+
+.typewriter:before,.typewriter:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.typewriter:before {
+    background-color: #000;
+    animation: typewriterr 2s steps(12) .25s forwards
+}
+
+.typewriter:after {
+    background-color: #ebebeb;
+    width: 1em;
+    animation: typewriterr 2s steps(12) .25s forwards,shrink 1s 2.25s ease forwards,fall .35s 3.25s forwards
+}
+
+.press-to-continue {
+    transform: translateY(15vh);
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2.6s;
+    padding-left: 1rem;
+    font-size: 1rem
+}
+
+.press-to-continue span:hover {
+    border-bottom: .2em solid white
+}
+
+@keyframes shrink {
+    to {
+        width: .2em;
+        bottom: 82%
+    }
+}
+
+@keyframes fall {
+    to {
+        top: 70%;
+        bottom: 15%
+    }
+}
+
+@keyframes typewriterr {
+    to {
+        left: 100%
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.svg-game {
+    background-color: #000
+}
+
+svg {
+    background-color: #000
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.1
+}
+
+.link:hover {
+    border-bottom: .2em solid white
+}
+
+.slider {
+    -webkit-appearance: none;
+    background: white;
+    outline: none;
+    height: .4rem
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000;
+    height: 1.2rem;
+    width: .5rem;
+    border: 2px solid white;
+    border-radius: 0
+}
+
+.slider::-moz-range-thumb {
+    background: #000;
+    border: 2px solid white;
+    border-radius: 0;
+    width: .5rem;
+    height: 1.2rem
+}
