@@ -3031,6 +3031,15 @@ function rs() {
         ),
         document.getElementById("reset-button").addEventListener("click", ()=>{
             l = new P;
+
+            s = true;
+            const g = document.getElementById("play");
+            g.style.display = "initial";
+            const C = document.getElementById("pause");
+            C.style.display = "none";
+
+            c = 0; // c -> number of alive cells
+            f = 0; // f -> number of geneations
         }
         ),
         document.getElementById("help-button").addEventListener("click", ()=>{
