@@ -216,3 +216,7 @@ h1 {
         padding-bottom: 0.125rem;
     }
 }
+
+ul li {
+    padding: 0.2rem 0;
+}

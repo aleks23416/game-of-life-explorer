@@ -3037,30 +3037,23 @@ function rs() {
         document.getElementById("help-button").addEventListener("click", ()=>{
             t = document.createElement("div"),
             t.innerHTML = `
-				<div style="position: fixed; top: 0%; right: 0%; bottom: 0%; left: 0%; opacity: 50%; background: black;">
-				</div>
 				<div style="padding: 0.5rem 0.5rem; background: black; position: fixed; top: 50%; right: 20%; left: 20%; transform: translateY(-50%); border: 0.3rem solid white; color: white; font-size: 0.8rem;">
-					<div  style="text-align: end;">
+					<div style="text-align: end; margin: 0.2rem 0;">
 						<span id="modal-close">X<span>
 					</div>
 					<div style="display: flex; flex-direction: column; justify-content: space-between; color: white; font-size: 0.8rem;">
 						<div>
-							<h3 style="margin-top: 0;">Desktop controls:</h3>
-							<ul style="list-style-type: none;">
-								<li>To move press mouse and move.</li>
-								<li>To zoom move mouse wheel.</li>
+							<h3 style="margin-top: 0;">Supported operations:</h3>
+							<ul>
+								<li>Moving</li>
+								<li>Zooming</li>
+                                <li>Pausing</li>
+                                <li>Toggling individual cells</li>
+                                <li>Toggling individual cells</li>
 							</ul>
 						</div>
 
-						<div>
-							<h3 style="margin-top: 2em;">Mobile controls:</h3>
-							<ul style="list-style-type: none;">
-								<li>To move press mouse and move.</li>
-								<li>To zoom move mouse wheel.</li>
-							</ul>
-						</div>
-
-						<div style="text-align: center; margin-top: 7em;">
+						<div style="text-align: center; margin-top: 7em; margin-bottom: 0.3em;">
 							>> <a class="link" style="color: white; text-decoration: none;" target='_blank' href="https://youtu.be/yw-j-4xYAN4?t=12&cc_load_policy=1">Press for game explanation</a> &#60;&#60;
 						</div>
 					</div>
