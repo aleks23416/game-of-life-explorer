@@ -2870,33 +2870,34 @@ function rs() {
     const e = document.createElement("div");
     return e.innerHTML = `
 		<div style="min-height: 100vh; display: flex; flex-direction: column;">
-        	<div style="padding: 0 0.4em; font-size: 0.65rem; display: flex; gap: 3em; color: white; background-color: black; border: 3px solid white;">
-				<div style="padding-right: 1.5em;">
+        	<div class="controls-container">
+				<div class="world" style="padding-right: 1.5em;">
 					<p>WORLD:</p>
 					<p>TO 4 BLOCKS</p>
 				</div>
-				<div style="padding-right: 1.5em;">
+				<div class="generation"style="padding-right: 1.5em;">
 					<p>GENERATION:</p>
 					<p id="number-of-generations"></p>
 				</div>
-				<div>
+				<div class="alive-cells">
 					<p>ALIVE CELLS:</p>
 					<p id="number-of-alive-cells">-//-</p>
 				</div>
 
-				<div style="margin-left: auto;">
+				<div class="speed">
 					<p>SPEED:</p>
 					<input class="slider" type="range" id="time-speed" min="0" max="100">
 				</div>
 
 
+                <div class="buttons-container">
 				<div class="button" style="display: flex; gap: 0.35em; align-items: center; display: grid; grid-template-columns: 1fr 1fr 1fr; align-self: center; padding: 0.35em 0;">
-					<div class="button" style="padding: 0.15rem; background: transaprent; border: 0.15rem solid white;" id="play-pause-button">
+					<div class="button" style="display: flex; align-items: center; justify-content: center; padding: 0.15rem; background: transaprent; border: 0.15rem solid white;" id="play-pause-button">
 						<svg id="play" xmlns="http://www.w3.org/2000/svg" style="display: none;" fill="white" height="2.05rem" width="2.05rem" viewBox="0 0 48 48"><path d="M16 37.85v-28l22 14Z"/></svg>
 						<svg id="pause" xmlns="http://www.w3.org/2000/svg"  fill="white" height="2.05rem" width="2.05rem" viewBox="0 0 48 48"><path d="M28.25 38V10H36v28ZM12 38V10h7.75v28Z"/></svg>
 					</div>
 
-					<div class="button" style="padding: 0.25rem; background: transaprent; border: 0.15rem solid white;" id="reset-button">
+					<div class="button" style="display: flex; align-items: center; justify-content: center; padding: 0.25rem; background: transaprent; border: 0.15rem solid white;" id="reset-button">
 						<svg fill="white" stroke="white" stroke-width="17" height="1.95rem" width="1.95rem" viewBox="0 0 1024 1024">
                           <path d="M745.833653 947.106726 283.823184 947.106726c-9.139148 0-16.956184-6.558369-18.525935-15.559371L153.772222 294.284443c-0.963954-5.474688 0.551562-11.095709 4.123924-15.357779 3.573385-4.243651 8.845459-6.704702 14.402011-6.704702l685.061544 0c5.556553 0 10.829649 2.462075 14.402011 6.704702 3.573385 4.26207 5.088902 9.883091 4.123924 15.357779L764.360612 931.546332C762.789836 940.548356 754.9728 947.106726 745.833653 947.106726zM299.631218 909.48385l430.395424 0 104.940051-599.640036L194.691167 309.843814 299.631218 909.48385z"  />
                           <path d="M647.185912 222.200708c-7.302313 0-14.246469-4.28049-17.305131-11.407817l-37.46631-87.570451-135.829572-8.064676-47.569412 82.500992c-5.198395 8.982582-16.71673 12.087293-25.691125 6.907317-9.001001-5.179976-12.087293-16.679891-6.898107-25.681916l53.374628-92.585675c3.554966-6.191003 10.425444-9.6815 17.405415-9.386788l159.040203 9.442046c7.118118 0.422625 13.382798 4.831029 16.184611 11.370978l42.040489 98.261954c4.087085 9.552563-0.348947 20.611433-9.892301 24.689309C652.164297 221.722824 649.657196 222.200708 647.185912 222.200708z"  />
@@ -2904,13 +2905,14 @@ function rs() {
 						</svg>
 					</div>
 
-					<div class="button" style="padding: 0.25rem; background: transaprent; border: 0.15rem solid white;" id="help-button">
+					<div class="button" style=" display: flex; align-items: center; justify-content: center; padding: 0.25rem; background: transaprent; border: 0.15rem solid white;" id="help-button">
 						<svg fill="white" height="1.95rem" width="1.95rem" viewBox="0 0 48 48">
 							<path d="M21.55 31.5q.05-3.6.825-5.25.775-1.65 2.925-3.6 2.1-1.9 3.225-3.525t1.125-3.475q0-2.25-1.5-3.75t-4.2-1.5q-2.6 0-4 1.475T17.9 14.95l-4.2-1.85q1.1-2.95 3.725-5.025T23.95 6q5 0 7.7 2.775t2.7 6.675q0 2.4-1.025 4.35-1.025 1.95-3.275 4.1-2.45 2.35-2.95 3.6t-.55 4Zm2.4 12.5q-1.45 0-2.475-1.025Q20.45 41.95 20.45 40.5q0-1.45 1.025-2.475Q22.5 37 23.95 37q1.45 0 2.475 1.025Q27.45 39.05 27.45 40.5q0 1.45-1.025 2.475Q25.4 44 23.95 44Z"/>
 						</svg>
 					</div>
 
 				</div>
+                </div>
 			</div>
         	<svg id="svg-reder-target"  style="width:100vw; flex-grow: 1;"></svg>
 		</div>

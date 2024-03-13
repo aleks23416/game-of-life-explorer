@@ -165,3 +165,54 @@ h1 {
     width: .5rem;
     height: 1.2rem
 }
+
+
+.controls-container {
+    display: flex;
+    padding: 0 0.4em;
+    font-size: 0.65rem;
+    gap: 3em;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.speed {
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 640px) {
+    .controls-container {
+        display: grid;
+        grid-template-columns:  repeat(6, minmax(0, 1fr));
+        gap: 1.5em;
+    }
+
+    .world, .generation, .alive-cells {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .speed, .buttons-container {
+        grid-column: span 3;
+        display: initial;
+    }
+
+    .speed {
+        margin-left: initial;
+        width: 75%;
+        padding-left: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .buttons-container {
+        display: initial;
+        padding-right: 1rem;
+        padding-bottom: 0.125rem;
+    }
+}
