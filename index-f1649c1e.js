@@ -2920,6 +2920,7 @@ function rs() {
     setTimeout(()=>{
         const n = e.querySelector("#svg-reder-target")
           , r = Yr(n);
+        n.style.touchAction = 'none';
         let i = r.node().clientHeight
           , o = r.node().clientWidth
           , s = !1
@@ -2989,6 +2990,7 @@ function rs() {
         }
         ),
         r.on("pointermove", g=>{
+            console.log('pointermove')
             if (!a)
                 return;
             const C = .1
@@ -2999,16 +3001,12 @@ function rs() {
             u = !0
         }
         ),
-        window.addEventListener("keypress", g=>{
-            switch (g.key) {
-            case "+":
+        window.addEventListener("wheel", g=>{
+            if (g.deltaY > 0)
                 y();
-                break;
-            case "-":
+            else if (g.deltaY < 0)
                 p();
-                break
             }
-        }
         ),
         window.addEventListener("resize", ()=>{
             i = r.node().clientHeight,
@@ -3071,15 +3069,18 @@ function rs() {
             h = new dt({
                 x: h.x,
                 y: h.y,
-                height: h.height + 2,
+                height: h.height + 2/5,
                 aspectRatio: h.aspectRatio
             })
         }
         function y() {
+            const newHeight = h.height - 2/5;
+            if (newHeight < 0) return;
+
             h = new dt({
                 x: h.x,
                 y: h.y,
-                height: h.height - 2,
+                height: newHeight,
                 aspectRatio: h.aspectRatio
             })
         }
