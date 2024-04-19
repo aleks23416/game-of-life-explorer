@@ -2820,13 +2820,17 @@ class dt {
         return e >= this.left && e <= this.right && n >= this.bottom && n <= this.top
     }
 }
+let shouldDrawGrid = true;
 class ns {
     constructor({svg: e}) {
         this.svg = e,
         this.grid_color = "gray"
     }
     render(e, n) {
-        this.drawLines(n);
+        if (shouldDrawGrid) {
+            this.drawLines(n);
+            shouldDrawGrid = false;
+        }
         const r = this.svg.node().clientWidth
           , i = this.svg.node().clientHeight
           , o = i / n.height
@@ -2990,7 +2994,7 @@ function rs() {
         }
         ),
         r.on("pointermove", g=>{
-            console.log('pointermove')
+            shouldDrawGrid = true;
             if (!a)
                 return;
             const C = .1
@@ -3002,6 +3006,7 @@ function rs() {
         }
         ),
         window.addEventListener("wheel", g=>{
+            shouldDrawGrid = true;
             if (g.deltaY > 0)
                 y();
             else if (g.deltaY < 0)

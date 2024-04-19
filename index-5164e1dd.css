@@ -36,7 +36,7 @@ body {
     min-height: 100vh
 }
 
-input,.button,.press-to-continue,a,#modal-close {
+input,.button,.press-to-continue,a,#modal-close, #svg-reder-target {
     cursor: url("/cursor(23).cur"),auto
 }
 
